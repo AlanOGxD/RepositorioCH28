@@ -1,0 +1,131 @@
+<!DOCTYPE html> <!--Declaración que representa el tipo de documento y ayuda a los navegadores a mostrar correctamente las páginas web-->
+<html lang="en"> <!-- Se le conoce como elemento raíz -->
+<head> <!-- Actúa como contenedor de todo lo que sea inxluir en la página HTML que no es visible por los visitantes de la página. Incluye palabras claves, metadatos, vínculos, etc.-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página web CH28</title>
+</head>
+<body>
+    <!-- <nombre de la etiqueta> El contenido .... < /cierre de la etiqueta> -->
+    <!-- <p>"Hola, soy un párrafo pequeñito"</p>
+
+    Etiquetas de cabecera (h1, h2, h3, h4, h5, h6)-->
+    <!-- <h1>Soy una etiqueta h1</h1>
+    <h2>Soy una etiqueta h2</h2>
+    <h3>Soy una etiqueta h3</h3>
+    <h4>Soy una etiqueta h4</h4>
+    <h5>Soy una etiqueta h5</h5>
+    <h6>Soy una etiqueta h6</h6> -->
+
+    <h3>Párrafos</h3>
+    <p>Hola, me llamo Daniel Maldonado. Soy <b>desarrollador Java Full Stack</b> y estoy aprendiendo a utilizar los <i>elementos</i>, las <mark>etiquetas</mark> y los atributos de HTML.</p>
+
+    <p>Me gusta pasar tiempo en las <u>redes sociales</u> y me gusta <del>escuchar música</del>, pero sobre todo, ver series y películas de <em>thrillers psicológicos y futuristas</em>.
+    </p>
+
+    <p>Estudié <strong>ingeniería en biotecnología ambiental</strong> y manejé fórmulas químicas coomo la del agua H<sub>2</sub>O y fórmulas matemáticas como el área de un círculo π * r<sup>2</sup></p>
+
+    <!-- Elementos de formato.
+        <b></b> formato texto en negrito
+        <i></i> texto en cursiva
+        <mark></mark> Texto marcado o resaltado
+        <u></u> formato de subrayado
+        <sub></sub> subíndice
+        <sup></sup> superíndice
+        <del></del> permite tachar el texto.
+        <blockquote></blockquote> permite crear citas
+        <strong></strong> Texto importante.
+        <em></em> texto enfatizado
+    -->
+
+    <h4>Cita con referencia</h4>
+    <blockquote cite="http://html.conclase.net/w3c/html401...def-BLOCKQUOTE">
+        <p>
+            Esta etiqueta nos permite citar un texto dentro de nuestro documento HTML, es decir, proporciona un mecanismo para insertar signos de puntuación de citas antes y después de una cita delimitada.
+        </p>
+    </blockquote>
+
+    <!-- Etiquetas divisorias y separadores
+
+    <hr> Nos sirve para dar una separación entre nuestros párrafos. Se muestra una línea horizontal que usaremos como separador.
+
+    <br> Sirve para dar una separación entre párrafos. Veremos un salto de línea que utilizaremos como separador.
+
+    -->
+    <hr>
+    <h3>Atributos de HTML</h3>
+    <!-- Los atributos de HTML proporcionan información sobre los elementos de HTML.
+    Todos los elementos de HTML pueden tener atributos.
+    Los atributos siempre se especifican en la etiqueta de inicio.
+    Vienen en pares de nombres: nombre="valor"
+
+    - Atributos globales. Se pueden aplicar a todos los elementos del documento, y no dependen de la etiqueta. Entre los atributos globales encontramos:
+        - class: Se usa para especificar un conjunto de elementos. Por ejemplo: <div class="clase1"></div>
+        - id: Se usa para especificar un identificar único para un elemento. Por ejemplo: <div id="id1"></div>
+        - style: Se usa para especificar una propiedad de estilos que se aplicará al elemento. Por ejemplo: <h1 style="color:red;"> Hola </h1>
+        - event: Se usa para espeficiar un evento que se ejecutará en un elemento. 
+        - hidden: Se usa para ocultar un elemento. Por ejemplo: hidden="hidden"
+    -->
+
+    <p style="color:midnightblue;">Hola, me llamo Daniel Maldonado. Soy <b style="color:goldenrod;">desarrollador Java Full Stack</b> y estoy aprendiendo a utilizar los elementos, las etiquetas y los atributos de HTML.</p>
+
+    <p align="center">(Centrado) Me gusta pasar tiempo en las redes sociales y me gusta escuchar música, pero sobre todo, ver series y películas de thrillers psicológicos y futuristas.
+    </p>
+
+    <p align="right">(A la derecha) Me gusta pasar tiempo en las redes sociales y me gusta escuchar música, pero sobre todo, ver series y películas de thrillers psicológicos y futuristas.
+    </p>
+
+    <p align="left">(A la izquierda) Me gusta pasar tiempo en las redes sociales y me gusta escuchar música, pero sobre todo, ver series y películas de thrillers psicológicos y futuristas.
+    </p>
+
+    <p align="justify">(Justificado) Me gusta pasar tiempo en las redes sociales y me gusta escuchar música, pero sobre todo, ver series y películas de thrillers psicológicos y futuristas.
+    </p>
+
+    <!-- 
+    <p align="center"></p>
+    <p align="right"></p>
+    <p align="left"></p>
+    <p align="justify"></p> 
+    -->
+    <hr>
+    <h3>Etiquetas de enlace</h3>
+
+    <!-- 
+        Los enlaces nos permiten la navegación por medio de hipervínculos (links) que realizan una conexión y referencian otros archivos o páginas web dentro de la misma aplicación o externa a la misma.
+
+        Para los enlaces se utiliza la etiqueta "anchor" (ancla) y se representa con una <a></a>
+        Los principales atributos de anchor son:
+            - href: nos permite definir la ubicación de la página a la que nos vamos a enlazar. Este atributo puede ser una URL (externa) o un archivo dentro de nuestro proyecto.
+            - _blank: abre el enlace en una nueva ventana
+            - _self: abre el enlace en la misma ventana (valor por default)
+        
+        - Rutas absolutas: Son aquellas que definen la ubicación completa de un archivo o una página web, por ejemplo: http://www.google.com.mx
+        - Rutas relativas: Son las que se definen a partir de la posición en la estructura local de la página que lo está refiriendo, es decir, solo indica el orden de directorios, por ejemplo: /assets/img/tamalitodechipilin.jpg
+
+    -->
+        <a href="http://www.google.com.mx">Da click aquí para visitar la página oficial de Google</a>
+
+        <br>
+        <br>
+
+        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Mira este vídio</a>
+
+        <br>
+        <br>
+
+        <a href="mailto: daniel.cruz@idr.edu.mx">Presiona aquí para enviarnos un correo</a>
+
+        <br>
+        <br>
+
+        <a href="/assets/images/tamalitos_de_chipilin.jpg" download>Descarga la imagen del tamalito de chipilin</a>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
