@@ -121,9 +121,150 @@
 
         <a href="/assets/images/tamalitos_de_chipilin.jpg" download>Descarga la imagen del tamalito de chipilin</a>
 
-    <br>
-    <br>
-    <br>
+    <hr>
+    <h3>Etiqueta de imagen</h3>
+    <!-- <img> etiqueta que sirve para almacenar imágenes
+    Atributos de imagen:
+        - src: El atributo source define la ubicación del archivo (local o remota)
+        - alt: define un texto alterno a la imagen
+        - width: define el ancho de la imagen
+        - height: define el alto de la imagen
+    
+    -->
+
+    <img src="/assets/images/Kiara.jpg" width="300px" alt="foto de kiara pensando">
+
+    <img src="https://cdn0.recetasgratis.net/es/posts/8/9/4/tamales_colados_75498_600_square.jpg" width="50%" alt="tamalito de masa colada">
+
+    <a href="https://www.w3schools.com/cssref/css_units.php" target="_blank">
+        <img src="/assets/images/abejita_programadora.jpg" width="250px" alt="abejita programando en Java">
+    </a>
+
+    <hr>
+    <h3>Listas</h3>
+    <!-- Listas ordenadas y desordenas
+    - Ordenadas: siguen una secuencia de jerarquía (1, 2, 3, 4...). Siguen un orden.
+        1. Tamalito de chipilín
+        2. Tamalito de masa colada
+        3. Tamalito de maíz nuevo
+        4. Tamalitos con shish de chicharrón
+    - Desordenadas: no siguen un proceso, por lo tanto no hay una numeración sino que existen viñetas.
+        - Kiara
+        - Laika
+        - Lucky
+        - Morgan 
+        - Appa
+
+    <ol> Ordered list o lista ordenada </ol>
+    <ul> lista desordenada </ul>
+    <li> list item o elemento de la lista </li>
+    -->
+
+    <h4>Lista ordenada y desordenada</h4>
+
+    <ol>Lista de asistencia
+        <li>Armando</li>
+        <li>Carlos</li>
+        <li>Mari</li>
+        <li>Zabdiel</li>
+    </ol>
+
+    <ul>Nombre de mascostas de la CH28
+        <li>Kiara</li>
+        <li>Laike</li>
+        <li>Lucky</li>
+        <li>Morgan</li>
+        <li>Appa</li>
+    </ul>
+
+    <ol>Tacos mexicanos
+        <li>Pastor</li>
+            <ul>
+                <li>Con salsa de la que pica</li>
+                <li>Con salsa de la que no pica</li>
+            </ul>
+        <li>Suadero</li>
+            <ol>
+                <li>Con queso</li>
+                <li>Sin queso</li>
+                <li>Con papas</li>
+            </ol>
+        <li>Carnitas</li>
+            <ol>
+                <li>Surtida</li>
+                    <ul>
+                        <li>Natural</li>
+                        <li>Con todo</li>
+                    </ul>
+                <li>Maciza</li>
+                    <ul>
+                        <li>Natural</li>
+                        <li>Con todo</li>
+                    </ul>
+            </ol>
+        <li>Canasta</li>
+    </ol>
+
+    <h4>Listas de definiciones</h4>
+    <!-- Las listas de definiciones nos permiten contener propiamente definiciones.
+    <dl> Nos sirve para indicar que es una definition list o lista de definición</dl>
+    <dt>Nos indica que es una definition term o término de definición</dt>
+    <dd> Nos indica una definición </dd>
+    -->
+
+    <dl>
+        <dt>Perrito</dt>
+        <dd>Es un animal mamífero de cuatro patas, bonitos, que viven en las casas y algunos viven en la calle :c</dd>
+
+        <dt>Gatito</dt>
+        <dd>Es un animal mamífero felino, con garritas ocultas, independiente, que le gusta andar visitando otras casas</dd>
+
+        <dt>Conejito</dt>
+        <dd>Es un animal mamífero, pequeñito, con orejas largas que dicen que comen zanahorias.</dd>
+    </dl>
+
+    <hr>
+    <h3>Etiqueta de división</h3>
+    <!-- 
+        La etiqueta de división se utiliza como contenedor de elementos HTML, que luego se diseñan con CSS o se manipulan con JavaScript.
+        La etiqueta <div></div> se diseña fácilmente utilizando los atributos globales de "class" "id"
+
+        ¡Se puede poner cualquier tipo de contenido dentro de la etiqueta <div>!
+    -->
+
+    <h4>El elemento div</h4>
+
+    <div>Hola, soy un contenedor div con un texto</div>
+
+    <div>
+        <h5>Soy un h5 dentro de un div</h5>
+        <p>Soy un párrafo viviendo en un div</p>
+    </div>
+
+    <!-- <p>Este es un párrafo de comparación con el div</p> -->
+    <hr>
+    <div id="contenederAbuelo" style="color:gray; border: 1px solid black; background-color: skyblue;"> Soy un abuelito
+        <div class="container" id="contenedorPadre" style="color:blue; border: 1px solid red; background-color: gold;"> <!--Este div funciona como contenedor-->
+            <p>Hola, el div padre</p>
+            <h4>Hola, soy h4 hermano del párrafo</h4>
+            <div class="container" id="contenedorHijo"  style="color: red; border: 1px solid green; background-color: aqua;">Hola, soy el div hijo
+                <div id="contenedorNieto" style="color: yellowgreen; border: 1px solid purple; background-color: gray;">
+                    Hola de nuevo, soy el div nieto
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <h3>Etiqueta span</h3>
+    <!-- La etiqueta span es un contenedor de línea que se utiliza para marcar una parte de un texto o una parte de un documento.
+    Es parecido a <div> pero <span></span> es un elemento a nivel línea
+    -->
+
+    <p style="color: blueviolet; font-weight: bolder;">
+        Ella es Kiara, tiene dos años y es muy glotona. Le gustan las salchichas y la cecina. Tiene tres <span style="color:green">peluches</span> y no se los presta a nadie. Es la <span style="color:deeppink; font-weight: 100;">consentida de la casa</span>, aunque sea la más <span style="color:crimson; font-family: cursive;">enojona</span>.
+    </p>
+
     <br>
     <br>
 
