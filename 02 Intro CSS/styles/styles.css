@@ -1,0 +1,370 @@
+/* CSS.
+Significa Hojas de estilo en cascada y se utiliza para mostrar los elementos HTML en la pantalla, incluyendo un diseño y variaciones en la visualización para diferentes dispositivos y tamaños de pantalla.
+
+============================
+Reglas de CSS
+Una regla consta de un selector y un bloque de declaración
+
+#contenedorAbuelo{
+    color:crimson;
+    font-size: xx-large;
+}
+
+Tipos de selectores.
+    - Etiquetas. h1, body, img, p, h5...
+    - Clases .contenedor
+    - id #contenedorAbuelo
+    - * Nos permite darle estilos a los elementos que sobran
+
+*/
+
+/* #button2{
+    color:red;
+    background-color: chartreuse;
+}
+
+.boton{
+    color:blueviolet;
+    background-color: darkcyan;
+} */
+
+/* Formas de insertar CSS
+    - CSS interno
+    - CSS en línea
+    - CSS externo
+
+    ---- CSS interno.
+    Se puede usar una hoja de estilo interna si una sola página HTML tiene un estilo único. Se define dentro del elemento <style> en el <head>
+
+    ---- CSS en línea.
+    Se utiliza para aplicar estilos en la misma línea de código a un solo elemento.
+
+    Por ejemplo: 
+    <h1 style="color:aquamarine">Hola, me llamo h1</h1>
+    <p style="background-color: fuchsia;">Y yo soy el párrafo</p>
+
+    ---- CSS externo.
+    Hace referencia a una hoja de estilos externa con extensión .css
+    Se debe incluir una referencia al archivo de hoja de estilos en el <head> de nuestras páginas HTML con el siguiente elemento: 
+
+    <link rel="stylesheet" href="/ubicacionHojaDeEstilo.css">
+
+==========================================
+********Colores de CSS**********
+Los colores se especifican utilizando nombres de colores predefinidos o valores RGB, HEX, HSL, RGBA, HSLA.
+
+CSS admitir 140 nombres de colores estándar
+https://www.w3schools.com/cssref/css_colors.php
+
+Paleta de colores
+https://colorhunt.co/
+
+h1{
+    color:rgb(2, 84, 100);
+}
+
+p{
+    color:#E57C23;
+}
+
+--- Color de fondo CSS
+Permite establecer el color de fondo de los elementos
+Se accede a ella mediante la propiedad background-color:nombre/hex/rgb;
+
+h1{
+    background-color: rgb(2, 84, 100);
+}
+
+p{
+    background-color:#E57C23;
+}
+
+--- Color de texto CSS
+Puede establecer el color del texto de un elemento.
+Se accede mediante la propiedad color:nombre/HEX/RGB;
+
+--- Color de borde
+Permite establecer el color de los bordes
+Se accede mediante la propiedad: border-color:nombre/HEX/RGB;
+h1{
+    border-style: solid;
+    border-color:brown
+}
+
+p{
+    border-style:solid;
+    border-color:darkslategray
+}
+
+=========================================
+********* Fondos de CSS (background)********
+Las propiedades de fondo de CSS se utilizan para agregar efectos de fondo a los elementos.
+
+    background-color
+    background-image
+    background-repeat
+    background-attachment
+    background-position
+
+--- background-color
+Esta propiedad especifica el color de fondo de un elemento.
+
+h1{
+    background-color:nombreColor/RGB/HEX
+}
+--- background-image
+Esta propiedad especifica una imagen para usar como fondo de un elemento. De manera predeterminada, la imagen se repite para que cubra todo el elemento.
+
+Se accede mediante la propiedad:
+background-image: url(RutaDeImage);
+
+-- Repetición de imagen de fondo
+Todas las imágenes de fondo se repiten de manera horizontal y vertical.
+    Si queremos que se repita solo horizontalmente, utilizamos la propiedad background-repeat: repeat-x;
+    Si queremos que se repita solo verticalmente, utilizamos background-repeat: repeat-y
+
+body{
+    background-color: blueviolet;
+    background-image: url(/assets/raichu_background2.png);
+    background-repeat: repeat-x;
+}
+
+h1{
+    color:azure;
+}
+
+p{
+    color: ghostwhite;
+    border-style: solid;
+    border-color: gold;
+}
+
+-- Posición de la imagen de fondo
+Se utiliza para especificar la posición de la imagen de fondo  y para ello se accede mediante la propiedad
+background-position:....
+
+body{
+    background-image: url(/assets/raichu_background2.png);
+    background-repeat: no-repeat;
+    background-position:10px 100px;
+}
+==============================================
+*********** Bordes CSS *****************
+La propiedad border permite especificar el estilo, el ancho, el alto y el color del borde de un elemento.
+
+--- Estilos de borde.
+border-style y especifica qué tipo de borde se muestra
+
+Se permiten los siguientes valores: 
+    - dotted : borde punteado
+    - dashed : borde discontinuo
+    - solid : borde sólido
+    - double : borde doble
+    - groove : borde ranurado 3D
+    - ridge : borde de inserción 3D
+    - inset : borde de inserción 3D
+    - outset : borde inicial 3D
+    - none : sin borde
+    - hidden : borde oculto
+
+lado 1 (lado de arriba): top
+lado 2 (lado de derecha): right
+lado 3 (lado de abajo): bottom
+lado 4 (lado de izquierda): left
+
+h1{
+    border-style:dotted solid none double;
+    border-color:blueviolet blue red goldenrod;
+}
+
+p{
+    border-style: dashed;
+    border-color: crimson;
+}
+--- Ancho del borde
+border-width especifica el ancho de los cuatro bordes
+
+Tenemos tres valores predefinidos que son thin, medium o thick.
+
+h1{
+    border-style:dotted solid none double;
+    border-color:blueviolet #000000 red goldenrod;
+    border-width:5px 2px 200px 0.5px;
+}
+
+p{
+    border-style: dashed;
+    border-color: crimson;
+    border-width:medium;
+}
+
+--- Bordes redondeados
+border-radius se usa para agregar bordes redondeados a un elemento
+
+h1{
+    border-style:solid;
+    border-color:blueviolet #000000 red goldenrod;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+p{
+    border-style: solid;
+    border-color: crimson;
+    border-width:thin;
+    border-radius:10px;
+}
+
+============================================
+********* Texto en CSS *************
+La propiedad color:NombreColor/RGB/HEX establece el color del texto
+
+--- Alineación del texto
+text-align se utiliza para establecer la alineación horizontal de un texto. Puede estar alineado a la izquierda, derecha, centrado o justificado
+
+h1{
+    color:blueviolet;
+    text-align:end;
+}
+
+p{
+    color:goldenrod;
+    text-align:center;
+}
+
+#parrafito{
+    color:maroon;
+    text-align:justify;
+}
+--- Deración de texto
+    text-decoration
+h1{
+    color:blueviolet;
+    text-align:end;
+    text-decoration-line:overline;
+    text-decoration-style: double;
+    text-decoration-color: darkorange;
+}
+
+p{
+    color:goldenrod;
+    text-align:center;
+    text-decoration-line:line-through;
+    text-decoration-style:dashed;
+    text-decoration-color: crimson;
+}
+
+#parrafito{
+    color:maroon;
+    text-align:justify;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color:deeppink;
+}
+
+a{
+    color:forestgreen;
+    text-decoration: none;
+}
+*** text-decoration: none; Elimina la decoración de texto por defecto que aparece en los enlaces <a></a>
+
+---- Transformación de texto CSS
+text-transform se utiliza para especificiar si todas las letras serán mayúsculas o minúsculas, es decir, transforma las letras.
+
+Podemos transformar a mayúsculas con uppercase; a minúsculas con lowercase o capitalizar la primer letra de cada palabra.
+
+h1{
+    text-transform:uppercase;
+}
+
+p{
+    text-transform:lowercase;
+}
+
+#parrafito{
+    text-transform:capitalize;
+}
+===================================================
+************ Fuentes CSS *************
+--- Familias de fuentes en CSS: 
+    - Serif. Fuente con un pequeño trazo en los bordes de cada letra.
+    - Sans-serif. Poseen líneas limpias.
+    - Monoespaciada. Todas las letras tienen el mismo ancho fijo.
+    - Cursiva. Imitar la escritura humana.
+    - Fantasia. Son fuentes decorativas, divertidas.
+
+    -- Propiedades de familias de fuentes en CSS
+    font-family:... se utiliza para especificar la fuente de un texto. El nombre de la fuente que es más de una palabra debe escribirse entre comillas.
+
+--- Estilos de fuente
+    font-style. Esta propiedad modifica el estilo de la fuente y tiene tres valores: 
+
+    - normal. El texto se va a mostrar normalmente
+    - italic. El texto se muestra en cursiva
+    - oblique. El texto está inclinado
+
+--- Grosor de fuente
+font-weight la cual especifica el grosor de fuente.
+
+    - lighter
+    - normal
+    - bold
+    - bolder
+    - Personalizado
+
+--- Tamaño de fuente
+font-size que nos permite establecer el tamaño del texto.
+
+h1{
+    font-family:'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size:40px;
+}
+
+p{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style:oblique;
+    font-weight: 900;
+    font-size:20px;
+}
+
+#parrafito{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style:italic;
+    font-weight: bolder;
+    font-size:12px;
+}
+
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:8px;
+}
+
+---- Familias de fuentes externas
+https://fonts.google.com/
+
+#parrafito{
+    font-family: 'Dancing Script', cursive;
+    font-size:32px;
+}
+===============================================
+El modelo de caja de CSS
+Es una caja que envuelve cada elemento HTML. Consiste en márgenes, bordes, rellenos y el contenido.
+
+--Parte de una caja de CSS
+    -Contenido de la caja (content box). El área donde se muestra el contenido.
+    -Relleno de la caja (padding box). Es el espacio en blanco alrededor del contenido.
+    -Borde de caja (border box). Envuelve el contenido y el relleno.
+    -Margen de caja (margin). Es la capa externa, envuelve el contenido, el relleno y el borde.
+
+    https://hablacode.org/static/media/Box-Model.ebc21d7b.PNG
+*/
+
+button{
+    border-style: solid;
+    border-color: blue;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 5px 10px 5px;
+    border-radius: 8px;
+}
