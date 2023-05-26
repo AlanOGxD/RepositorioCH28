@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>HTML Avanzado</title>
+</head>
+<body>
+    <!-- Tablas en HTML
+
+    Una tabla es un conjunto de filas y columnas que contienen información necesaria. Nos sirve para organizar y tener una mejor visibilidad de los elementos.
+
+    ** Celda. Una celda es la intersección entre una fila y columna que contiene información necesaria.
+    En HTML definimos las celdas utilizando la etiqueta <td></td>
+
+    ** Filas. Las filas se definen mediante la etiqueta <tr></tr>
+
+    ** Encabezados de tabla.
+    Se definen los encabezados de tabla mediante la etiqueta <th></th>
+
+    Para iniciar una tabla en HTML, se define la etiqueta <table></table> y se divide en dos partes:
+        - Cabeza de la tabla <thead></thead>
+        - Cuerpo de la tabla <tbody></tbody>
+    -->
+
+    <p>Tabla de personas</p>
+    <table>
+        <thead>
+            <tr> <!-- Fila 1-->
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>País</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><!-- Fila 2-->
+                <td>Hiram Navarro</td>
+                <td>23</td>
+                <td>México</td>
+            </tr>
+            <tr><!-- Fila 3-->
+                <td>Paulina Ensastiga</td>
+                <td>19</td>
+                <td>Portugal</td>
+            </tr>
+            <tr><!-- Fila 4-->
+                <td>Daniel Corona</td>
+                <td>22</td>
+                <td>Rusia</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <!-- Tablita 2 
+    Crear una tabla donde muestres el nombre, el apellido del entrenador pokemon y su pokemon base
+    -->
+
+<!-- Título de tabla
+    Para agregar un título a la tabla, utilizaremos la etiqueta <caption> -->
+    <table>
+        <caption>Maestros Pokemon</caption>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Pokemon</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><!--Maestro 1-->
+                <td>Osvaldo</td>
+                <td>Morales</td>
+                <td><a href="https://www.pokemon.com/el/pokedex/totodile" target="_blank">Totodile</a></td>
+            </tr>
+            <tr><!--Maestro 2-->
+                <td>Nancy</td>
+                <td>Pérez</td>
+                <td>Moltres<br><img id="moltres" src="/assets/moltres.png" alt="moltres"></td>
+            </tr>
+            <tr><!--Maestro 3-->
+                <td>Hiram</td>
+                <td>Navarro</td>
+                <td>Mew</td>
+            </tr>
+            <tr><!--Maestro 4-->
+                <td>Kevin</td>
+                <td>González</td>
+                <td>Mewtwo</td>
+            </tr>
+        </tbody>
+    </table>
+
+<!-- Instrucciones:
+Diseña un horario de clases de lunes a viernes con 3 horarios (8:00 - 9:00; 9:00 - 10:00; 10:00 - 11:00) con las materias que gustes. Agrega estilos para que tu horario quede chido
+-->
+</body>
+</html>
