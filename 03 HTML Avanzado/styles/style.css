@@ -4,11 +4,11 @@ table, th, td{
     text-align: center;
 }
 
-p{
+/* p{
     font-size: 20px;
     margin-bottom: 3px;
     font-weight: bold;
-}
+} */
 
 table{
     /* width: 100%; */
@@ -16,10 +16,27 @@ table{
     /* height: 300px; */
 }
 
-a{
+/* a{
     text-decoration: none;
-}
+} */
 
 #moltres{
     width: 50px;
+}
+
+/* .form1{
+    background-color: blue;
+} */
+/* #user{
+    background-color: blue;
+} */
+
+#gameLand{
+    border-style: solid;
+    margin: 10px 0px 10px 0px;
+    padding: 5px;
+}
+
+h4{
+    text-align: center;
 }
