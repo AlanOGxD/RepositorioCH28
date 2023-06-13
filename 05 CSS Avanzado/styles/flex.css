@@ -1,0 +1,35 @@
+.flex {
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+
+    flex-flow: row wrap;
+
+
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap-reverse; */
+}
+
+
+
+.flex > div {
+    width: 100px;
+    margin: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--primary);
+    border: 3px solid var(--info);
+}
+
+#div7 {
+    order: -1;
+}

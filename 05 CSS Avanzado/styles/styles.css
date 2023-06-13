@@ -1,0 +1,20 @@
+:root {
+    --primary: #00334E;
+    --info: #F6F5F5;
+    --secondary: #145374;
+    --contrast: #EE6F57;
+}
+
+body {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    background-color: var(--primary);
+}
+
+div {
+    padding: 10px 0px 10px 0px;
+    background-color: var(--secondary);
+    color: var(--info);
+    border: 5px solid var(--contrast);
+}
+
