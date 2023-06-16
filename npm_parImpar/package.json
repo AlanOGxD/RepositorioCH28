@@ -1,0 +1,15 @@
+{
+  "name": "@danieldlcm86/npm_parimpar",
+  "version": "1.0.1",
+  "description": "Paquete creado con npm para determinar si un número es par o impar utilizando funciones",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "par",
+    "impar"
+  ],
+  "author": "@danieldlcm86",
+  "license": "ISC"
+}
