@@ -20,3 +20,16 @@
 
 - Reconocer que son los Grids y practicar su uso
 - Utilizar Material-UI para crear componentes en el proyecto
+
+## Rutas
+
+- Identificar que es el enrutamiento en React
+- Utilizar React Router para crear rutas en una aplicacion React
+
+
+## EJERCICIO Tiempo limite viernes 5.30
+ 
+CREAR APOD
+LINK HACIA APOD
+
+Imagen a link '/'
