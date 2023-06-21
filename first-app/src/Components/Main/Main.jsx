@@ -4,7 +4,6 @@
 
 const titleStyle = {
     color: 'white',
-    backgroundColor: 'red',
 }
 
 
@@ -19,7 +18,6 @@ function Main({name, age}) {
             <h3
                 style={{
                     color: 'red',
-                    backgroundColor: 'white',
                 }}
             >
                 {age}

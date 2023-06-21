@@ -1,6 +1,6 @@
 # Objetivos de React
 
-## Sesion 1
+## Introducción a React
 
 - Describir React
 - Identificar ventajas/desventajas de React
@@ -8,10 +8,15 @@
 - Describir como renderizar elementos html con React/en el DOM
 - Definir que es el DOM virtual
 
-## Sesion 2
+## Componentes
 
 - Identificar que es un componente en React
 - Practicar creacion de componentes
 - Reconocer componentes y sus interaccion
 - Identificar props en React
 - Practicar como estilizar componentes con CSS
+
+## Material UI
+
+- Reconocer que son los Grids y practicar su uso
+- Utilizar Material-UI para crear componentes en el proyecto
