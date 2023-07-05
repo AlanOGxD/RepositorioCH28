@@ -14,9 +14,9 @@ public class POODocumentation {
 	 * */
 	//cuenta bancaria
 	
-	public double saldo;//Atributo de instancia
-	public String cliente;
-	public int transacciones;
+	private double saldo;//Atributo de instancia
+	private String cliente;
+	private int transacciones;
 	public static int totalCuentas = 0;//Atributo de clase
 	
 	/*2. Métodos constructores. Método especial que se usa para inicializar objetos. Cad avez que se crea un objeto, utilizamos el constructor new().
@@ -68,23 +68,96 @@ public class POODocumentation {
 		System.out.println("Hola, soy un método público");
 	}
 	
+	/* Sobrecarga de métodos. Característica de una clase que le permite recibir métodos con el mismo nombre pero diferentes firmas.*/
+	 public int suma (int num1, int num2){
+		 return num1 + num2;
+	 }//Output int
 	
-	public static void main(String[] args) {
+	 public double suma (double num1, double num2){
+		 return num1 + num2;
+	 }//Output int
+	 
+	 
+	 
+	 //Método main para acceder (invocar) a mis métodos de clase
+	 public static void main(String[] args) {
 		POODocumentation cliente1 = new POODocumentation(50, "Daniel", 2);
 		System.out.println(cliente1);
 
 		POODocumentation cliente2 = new POODocumentation(50, 2);
 		System.out.println(cliente2);
 		
-		//Invocando un métod estático
+		//Invocando un método estático
 		metodoStatic();
 		
 		//Invocando un método público desde un objeto
 		POODocumentation publico = new POODocumentation();
 		publico.metodoPublic();
 		
+		//Probando la sobrecarga de métodos
+		System.out.println(publico.suma(2.3, 2.5));
+		System.out.println(publico.suma(5, 8));
+		
+		/* Getters y Setters. Son métodos que nos permiten acceder a la información  protegida por modificadores de acceso y que de otra manera no podrías acceder a ellos. Gracias a estos métodos sacamos una copia de ese dato protegido y lo podemos modificar.
+		 * -- Getters (método de obtención). Proporcionan solo lectura de los campos privados.
+		 * -- Setter (métodos de establecimiento). Se utilizan para modificar el valor de un campo en una clase. 
+		 * ¿ Qué pasaría si no escribo getters y setters en mi clase de Java?
+		 * Los campos privados de una clase no serán accesibles desde otras clases. 
+		 */
+		
+		//Getter (sintaxis)
+		/*public tipoDeDato getNombreDeVariable() {
+			return nombreDeVariable
+		}*/
+		
+		//Setter (sintaxis)
+		/*public void setNombreDeVariable(tipoDato nombreVariable) {
+			this.nombreVariable = nombreVariable;
+		}*/
+		
+		/*===== Ruta para crear getters y setter. Sobre el espacio de trabajo de la java class:
+			1. Click derecho.
+			2. Source
+			3. Generate Getters and Setters
+			4. Seleccionar las variables (fields) a las cuales les construiremos getters y setters
+			5. Generar getters y setters*/
+		
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public String getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(String cliente) {
+		this.cliente = cliente;
+	}
+
+	public int getTransacciones() {
+		return transacciones;
+	}
+
+	public void setTransacciones(int transacciones) {
+		this.transacciones = transacciones;
+	}
+
+	/*=== @Override toString(). Se utilizar para devolver una respresentación de String de un Objeto.
+	 * Para generarlo se accede a las opciones de la java class con click derecho -> source -> Generate toString()*/
+	
+	@Override
+	public String toString() {
+		return "POODocumentation [saldo=" + saldo + ", cliente=" + cliente + ", transacciones=" + transacciones + "]";
 	}
 	
+	
+
 	
 	
 	
