@@ -1,0 +1,58 @@
+Notas de JAVA REST API y JPA
+
+Sistema de admin para una libreria
+- Implementaremos relaciones 1:1, 1:N, N:M
+- 4 Entidades
+
+Config
+1. Base de datos
+- Ingles
+- No camelCase -> snake_case
+- Entidades = User, Book, Author, Genre
+
+- Tablas pivote sin PK
+- Ids -> ids descriptivos para cada entidad: User -> user_id, Books -> book_id, etc
+
+
+2. API
+- Version de spring mas antigua disponible (2.7.14v)
+- Version de JAVA 17
+
+2.1 Initializr
+- Gradle - Groovy,
+- Java,
+- Spring 2.7.14v (La mas antigua disponible)
+- com.bookstore
+- JAR
+- Java 17v
+- Dependencias: 
+	- Spring Web
+	- Spring Data JPA
+	- MySQL Driver
+
+2.2 Importacion
+- Generar proyecto con Initializr
+- Descomprimir
+- !Importante verificar que no haya carpetas anidadas
+	- Mover carpeta al workspace
+- En eclipse, importar proyecto existente de Gradle.
+	- Seleccionar el proyecto dentro del workspace
+	- Esperar a que se construya
+
+2.3 build.gradle
+- Verificar version Spring
+- Version del proyecto, ej: '0.0.1-SNAPSHOT'
+- Version Java
+- Dependencias
+
+3. Estructura de la API
+- Todos los paquetes para nuestro MVC van a ir dentro del paquete principal/inicial donde se encuentra nuestro archivo Application.java
+- Controller, Entity/Model, Repository, Service
+
+4. Creacion de clases
+- Ids PK, AI, NN, Se deben declarar como tipo de dato Long
+- Constructor de todos los atributos + constructor vacio para JPA
+
+
+
+
