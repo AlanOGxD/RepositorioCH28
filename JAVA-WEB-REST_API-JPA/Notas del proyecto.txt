@@ -53,6 +53,42 @@ Config
 - Ids PK, AI, NN, Se deben declarar como tipo de dato Long
 - Constructor de todos los atributos + constructor vacio para JPA
 
+4.1 Anotaciones para entidades
+- @Id, @GeneratedValue, @Column para atributos PK
+- @Column(nullable=false) para atributos NOT NULL en la BD
+- Constructor con atributos es opcional
+- Constructor vacio ?requerido
+- Relaciones
+	-Definir tipo de relacion @ManyToOne
+	-Definir columna con FK @JoinColumn(name="column_name")
+	-Definir entidad que se relaciona private Entity entity
+- Getters y setters
 
+5. Creacion de Repositorios
+- Interfaces que heredan de JpaRepository<Entidad, Long>
 
+6. Creacion de Servicios
+- Crear una inyeccion de dependencia desde nuestro EntityRepository
+- Todos los metodos los obtendremos desde JpaRepository;
 
+7. Creacion de controllers
+- Declaramos Mapping para la entidad -> @RequestMapping(path="/api/entidad")
+- @RestController
+- Autowired para obtener datos de entityService
+- @Mapping para cada operacion CRUD
+
+8. Conexion con la BD
+- Configuracion de desarrollo, No produccion
+- application.properties -> src/main/resources
+
+-----
+spring.datasource.url= jdbc:mysql://localhost:3306/bookstore
+
+spring.datasource.username=root
+
+spring.datasource.password=Pa$$w0rd
+
+spring.jpa.hibernate.ddl-auto=update
+----
+
+8.1 Encender servicio de MySQL y asegurarse de que esté disponible la BD
