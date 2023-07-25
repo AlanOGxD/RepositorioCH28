@@ -56,6 +56,7 @@ Config
 4.1 Anotaciones para entidades
 - @Id, @GeneratedValue, @Column para atributos PK
 - @Column(nullable=false) para atributos NOT NULL en la BD
+- @Column(name="column_name", nullable=false) <- opcional pero recomendado
 - Constructor con atributos es opcional
 - Constructor vacio ?requerido
 - Relaciones
@@ -63,6 +64,7 @@ Config
 	-Definir columna con FK @JoinColumn(name="column_name")
 	-Definir entidad que se relaciona private Entity entity
 - Getters y setters
+- Revisar/comprobar relaciones y sus anotaciones cuando hay N:M
 
 5. Creacion de Repositorios
 - Interfaces que heredan de JpaRepository<Entidad, Long>
@@ -76,6 +78,8 @@ Config
 - @RestController
 - Autowired para obtener datos de entityService
 - @Mapping para cada operacion CRUD
+- @RequestBody para POST PUT
+- Metodos en POST cuando tenemos relaciones N:M y llaves foraneas -> EntityService
 
 8. Conexion con la BD
 - Configuracion de desarrollo, No produccion
