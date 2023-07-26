@@ -1,5 +1,6 @@
 package com.bookstore.bookstore.Entity;
 
+
 import java.util.List;
 
 import javax.persistence.Column;
@@ -11,12 +12,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
-@Table(name = "Book")
+@Table(name = "book")
 public class Book {
 	// Id's tipo de dato -> Long
 	
@@ -37,7 +39,6 @@ public class Book {
 	@Column(name="stock", nullable=false)
 	private int stock;
 	
-	
 	// Constructor vacio para JPA
 	public Book() {
 	}
@@ -47,6 +48,13 @@ public class Book {
 	@JoinColumn(name="Genre_genre_id", nullable=false)
 	private Genre genre;
 	
+	// Nueva relacion para tabla pivote con atributos especiales
+	@OneToMany(mappedBy="book")
+	@JsonManagedReference(value="book-order")
+	private List<UserHasBook> userBooks;
+	
+	
+	
 	// Relaciones M:N
 	@ManyToMany
 	@JoinTable(
@@ -55,11 +63,20 @@ public class Book {
 			inverseJoinColumns = @JoinColumn(name="Author_author_id")
 	)
 	
-	private List<Author> authors;
+	// Esta instancia se omite ya que deja de existir por su relacion M:N
+	 private List<Author> authors;
 	
 	public List<Author> getAuthors() {
 		return authors;
 	}
+
+//	public List<UserHasBook> getUserBooks() {
+//		return userBooks;
+//	}
+//
+//	public void setUserBooks(List<UserHasBook> userBooks) {
+//		this.userBooks = userBooks;
+//	}
 
 	public Genre getGenre() {
 		return genre;
@@ -69,9 +86,9 @@ public class Book {
 		this.genre = genre;
 	}
 
-	public void setAuthors(List<Author> authors) {
-		this.authors = authors;
-	}
+//	public void setAuthors(List<Author> authors) {
+//		this.authors = authors;
+//	}
 
 	public Long getBook_id() {
 		return book_id;

@@ -52,24 +52,41 @@ public class BookController {
 		return bookService.getBookById(id);
 	}
 	
+	
+	
 	@PostMapping
 	public Book createBook(@RequestBody Book book) {
-		// get genre from the database and make a match
-		
+		// Obtenemos genre
 		Genre persistentGenre = genreService.getGenreById(book.getGenre().getGenre_id());
-		book.setGenre(persistentGenre);
 		
-		// Authors is the same as genre, but for a list
+		// Obtenemos autores
 		List<Author> persistentAuthors = new ArrayList<>();
-		// Add to the list each author found by their ID
 		for(Author author: book.getAuthors()) {
-			Author persistentAuthor = authorService.getAuthorById(author.getAuthor_id());
-			persistentAuthors.add(persistentAuthor);
+			
 		}
-		book.setAuthors(persistentAuthors);
 		
 		return bookService.createBook(book);
 	}
+	
+//	Codigo previa relacion M:N
+//	@PostMapping
+//	public Book createBook(@RequestBody Book book) {
+//		// get genre from the database and make a match
+//		
+//		Genre persistentGenre = genreService.getGenreById(book.getGenre().getGenre_id());
+//		book.setGenre(persistentGenre);
+//		
+//		// Authors is the same as genre, but for a list
+//		List<Author> persistentAuthors = new ArrayList<>();
+//		// Add to the list each author found by their ID
+//		for(Author author: book.getAuthors()) {
+//			Author persistentAuthor = authorService.getAuthorById(author.getAuthor_id());
+//			persistentAuthors.add(persistentAuthor);
+//		}
+//		book.setAuthors(persistentAuthors);
+//		
+//		return bookService.createBook(book);
+//	}
 	
 	// Put
 	@PutMapping
