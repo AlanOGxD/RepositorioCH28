@@ -3,4 +3,4 @@
 
 ![Generation_Logo](https://raw.githubusercontent.com/danieldlcm86/RepositorioCH28/master/01%20Intro%20HTML/assets/images/generation-logo.jpg)
 
-[Generation MX. Sitio Oficial](https://www.example.com](https://mexico.generation.org/)https://mexico.generation.org/)
+[Generation MX. Sitio Oficial](https://mexico.generation.org/)
